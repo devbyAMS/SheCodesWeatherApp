@@ -66,11 +66,11 @@ function getForecast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 function displayForecast(response) {
-  let forecastHtml = "";
+  let forecastHtml = '<div class="weatherforecast">';
 
   response.data.daily.forEach(function (day, index) {
     if (index < 5)
-      forecastHtml = forecastHtml`
+      forecastHtml += `
  <div class="weatherforecastday">
             <div class="weatherday">${formatDay(day.time)}</div>
              <img src="${day.condition.icon_url}" class="weather-app-icon" />
