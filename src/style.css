@@ -73,6 +73,7 @@ main {
 .weather-app-icon {
   width: 88px;
   height: 88px;
+  display: block;
 }
 
 .weather-app-temperature {
