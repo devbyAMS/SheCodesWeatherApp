@@ -72,7 +72,7 @@ function displayForecast(response) {
     if (index < 5)
       forecastHtml = forecastHtml`
  <div class="weatherforecastday">
-            <div class="weatherday">${formatDay.(day.time)}</div>
+            <div class="weatherday">${formatDay(day.time)}</div>
              <img src="${day.condition.icon_url}" class="weather-app-icon" />
             <div class="weatherforecasttemperatures">
               <div class="degrees"><strong>${Math.round(
