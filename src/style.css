@@ -99,6 +99,8 @@ main {
   justify-content: space-around; /* Ensures equal spacing between items */
   align-items: center;
   gap: 10px; /* Small space between forecast items */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  overflow-x: auto;
 }
 
 /* Each day's forecast box */
@@ -108,6 +110,7 @@ main {
   align-items: center;
   text-align: center;
   padding: 10px;
+  min-width: 80px;
 }
 
 /* Forecast day text (Mon, Tue, etc.) */
@@ -116,6 +119,11 @@ main {
   font-weight: bold;
   color: #333;
   margin-bottom: 5px;
+}
+
+#forecast {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
 /* Weather icons (centered above temperature) */
