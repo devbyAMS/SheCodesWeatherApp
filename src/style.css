@@ -89,18 +89,19 @@ main {
 
 /* Wrapper for the entire forecast section */
 .weatherforecast {
-  background: white; /* Ensures all forecast items are inside a single white box */
-  border-radius: 16px; /* Smooth rounded corners */
-  padding: 20px; /* Space inside the box */
-  max-width: 600px; /* Matches the main weather app */
-  margin: 20px auto; /* Centers the forecast section */
-  box-shadow: 0px 10px 30px rgba(65, 50, 100, 0.1); /* Soft shadow effect */
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0px 10px 30px rgba(65, 50, 100, 0.1);
   display: flex;
-  justify-content: space-around; /* Ensures equal spacing between items */
+  flex-direction: row; /* ✅ Make sure items are side by side */
+  justify-content: space-between;
   align-items: center;
-  gap: 10px; /* Small space between forecast items */
-  flex-wrap: nowrap; /* Prevent items from wrapping */
-  overflow-x: auto;
+  gap: 10px;
+  flex-wrap: nowrap; /* ✅ Prevent items from wrapping */
+  overflow-x: auto; /* ✅ Allow horizontal scrolling if needed */
 }
 
 /* Each day's forecast box */
@@ -110,7 +111,8 @@ main {
   align-items: center;
   text-align: center;
   padding: 10px;
-  min-width: 80px;
+  min-width: 100px; /* ✅ Ensure each item has enough space */
+  flex: 1; /* ✅ Helps distribute space evenly */
 }
 
 /* Forecast day text (Mon, Tue, etc.) */
@@ -123,7 +125,8 @@ main {
 
 #forecast {
   width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  overflow-x: auto; /* ✅ Allow scrolling if items overflow */
+  display: flex; /* ✅ Make sure children align correctly */
 }
 
 /* Weather icons (centered above temperature) */
