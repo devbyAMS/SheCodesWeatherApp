@@ -89,47 +89,19 @@ main {
 
 /* Wrapper for the entire forecast section */
 .weatherforecast {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  width: 100%; /* ✅ Ensure it takes full width */
-  max-width: none; /* ✅ Remove any unnecessary width constraints */
-  margin: 20px auto;
-  box-shadow: 0px 10px 30px rgba(65, 50, 100, 0.1);
   display: flex;
-  flex-direction: row; /* ✅ Ensures items are side by side */
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: nowrap; /* ✅ Prevent wrapping */
-  overflow-x: auto; /* ✅ Allows horizontal scrolling if needed */
-  white-space: nowrap; /* ✅ Ensures everything stays in a row */
-}
-
-/* Each day's forecast box */
-.weatherforecastday {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  min-width: 120px; /* ✅ Increased width to prevent shrinking */
-  flex: 0 0 auto; /* ✅ Prevents items from shrinking */
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 /* Forecast day text (Mon, Tue, etc.) */
-.weatherday {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
 
-#forecast {
-  width: 100%;
-  overflow-x: auto; /* ✅ Enable horizontal scrolling */
-  display: flex; /* ✅ Ensure children align in a row */
-  justify-content: flex-start; /* ✅ Align items from the left */
+.weatherday {
+  text-align: center;
+  color: rgba(69, 42, 190, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 /* Weather icons (centered above temperature) */
