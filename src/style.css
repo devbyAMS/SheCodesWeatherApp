@@ -91,6 +91,7 @@ main {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  width: 100%;
 }
 /* Forecast day text (Mon, Tue, etc.) */
 

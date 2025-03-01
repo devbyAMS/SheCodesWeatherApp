@@ -72,14 +72,15 @@ function displayForecast(response) {
     if (index < 5)
       forecastHtml += `
  <div class="weatherforecastday">
-            <div class="weatherday">${formatDay(day.time)}</div>
-             <img src="${day.condition.icon_url}" class="weather-app-icon" />
-            <div class="weatherforecasttemperatures">
-              <div class="degrees"><strong>${Math.round(
-                day.temperature.maximum
-              )}</strong></div>
-              <div class="degrees">${Math.round(day.temperature.minimum)}</div>
-            </div> `;
+  <div class="weatherday">${formatDay(day.time)}</div>
+  <img src="${day.condition.icon_url}" class="weather-app-icon" />
+  <div class="weatherforecasttemperatures">
+    <div class="degrees"><strong>${Math.round(
+      day.temperature.maximum
+    )}</strong></div>
+    <div class="degrees">${Math.round(day.temperature.minimum)}</div>
+  </div>
+</div>`;
   });
 
   let forecastElement = document.querySelector("#forecast");
